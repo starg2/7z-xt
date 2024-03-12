@@ -1,0 +1,8 @@
+.vs/
+.vscode/
+build/
+install/
+tools/private/
+CMakeSettings.json
+CMakeUserPresets.json
+*.pdb
