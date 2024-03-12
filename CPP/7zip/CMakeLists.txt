@@ -143,5 +143,9 @@ function(AddSha256Sources target)
   endif()
 endfunction()
 
+include(Bundles/Format7zF/Arc.cmake)
+include(UI/Console/Console.cmake)
+include(UI/FileManager/FM.cmake)
+
 add_subdirectory(Bundles)
 add_subdirectory(UI)
