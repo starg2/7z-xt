@@ -1,2 +1,11 @@
 
+add_subdirectory(Alone)
+add_subdirectory(Alone2)
+add_subdirectory(Alone7z)
+add_subdirectory(Fm)
+add_subdirectory(Format7z)
+add_subdirectory(Format7zExtract)
+add_subdirectory(Format7zExtractR)
 add_subdirectory(Format7zF)
+add_subdirectory(Format7zR)
+add_subdirectory(LzmaCon)
