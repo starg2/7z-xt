@@ -1,0 +1,12 @@
+root = true
+
+[*]
+charset = utf-8
+indent_size = 2
+indent_style = space
+
+[*.{bat,cmd,hhp,inf,nsi,wxs}]
+end_of_line = crlf
+
+[{[Mm]akefile,*.mak}]
+indent_style = tab
