@@ -37,6 +37,7 @@ add_executable(
   "${PROJECT_SOURCE_DIR}/CPP/Windows/PropVariantConv.cpp"
   "${PROJECT_SOURCE_DIR}/CPP/Windows/Synchronization.cpp"
   "${PROJECT_SOURCE_DIR}/CPP/Windows/System.cpp"
+  "${PROJECT_SOURCE_DIR}/CPP/Windows/TimeUtils.cpp"
 
   # 7ZIP_COMMON
   "${PROJECT_SOURCE_DIR}/CPP/7zip/Common/CreateCoder.cpp"
@@ -143,6 +144,8 @@ target_compile_definitions(
   Z7_EXTRACT_ONLY
   Z7_NO_READ_FROM_CODER
   Z7_SFX
+  Z7_NO_LONG_PATH
+  Z7_NO_LARGE_PAGES
 )
 
 install(TARGETS SFXCon)

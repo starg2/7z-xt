@@ -20,6 +20,7 @@ function(AddArcSources target)
     "${PROJECT_SOURCE_DIR}/CPP/Common/StringToInt.cpp"
     "${PROJECT_SOURCE_DIR}/CPP/Common/UTFConvert.cpp"
     "${PROJECT_SOURCE_DIR}/CPP/Common/Wildcard.cpp"
+    "${PROJECT_SOURCE_DIR}/CPP/Common/Xxh64Reg.cpp"
     "${PROJECT_SOURCE_DIR}/CPP/Common/XzCrc64Init.cpp"
     "${PROJECT_SOURCE_DIR}/CPP/Common/XzCrc64Reg.cpp"
 
@@ -103,6 +104,7 @@ function(AddArcSources target)
     "${PROJECT_SOURCE_DIR}/CPP/7zip/Archive/XarHandler.cpp"
     "${PROJECT_SOURCE_DIR}/CPP/7zip/Archive/XzHandler.cpp"
     "${PROJECT_SOURCE_DIR}/CPP/7zip/Archive/ZHandler.cpp"
+    "${PROJECT_SOURCE_DIR}/CPP/7zip/Archive/ZstdHandler.cpp"
 
     # AR_COMMON
     "${PROJECT_SOURCE_DIR}/CPP/7zip/Archive/Common/CoderMixer2.cpp"
@@ -238,6 +240,7 @@ function(AddArcSources target)
     "${PROJECT_SOURCE_DIR}/CPP/7zip/Compress/ZlibDecoder.cpp"
     "${PROJECT_SOURCE_DIR}/CPP/7zip/Compress/ZlibEncoder.cpp"
     "${PROJECT_SOURCE_DIR}/CPP/7zip/Compress/ZDecoder.cpp"
+    "${PROJECT_SOURCE_DIR}/CPP/7zip/Compress/ZstdDecoder.cpp"
 
     # CRYPTO
     "${PROJECT_SOURCE_DIR}/CPP/7zip/Crypto/7zAes.cpp"
@@ -288,10 +291,12 @@ function(AddArcSources target)
     "${PROJECT_SOURCE_DIR}/C/Sort.c"
     "${PROJECT_SOURCE_DIR}/C/SwapBytes.c"
     "${PROJECT_SOURCE_DIR}/C/Threads.c"
+    "${PROJECT_SOURCE_DIR}/C/Xxh64.c"
     "${PROJECT_SOURCE_DIR}/C/Xz.c"
     "${PROJECT_SOURCE_DIR}/C/XzDec.c"
     "${PROJECT_SOURCE_DIR}/C/XzEnc.c"
     "${PROJECT_SOURCE_DIR}/C/XzIn.c"
+    "${PROJECT_SOURCE_DIR}/C/ZstdDec.c"
   )
 
   AddAesSources(${target})

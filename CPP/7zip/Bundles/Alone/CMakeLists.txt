@@ -19,10 +19,11 @@ add_executable(
   "${PROJECT_SOURCE_DIR}/CPP/Common/UTFConvert.cpp"
   "${PROJECT_SOURCE_DIR}/CPP/Common/MyVector.cpp"
   "${PROJECT_SOURCE_DIR}/CPP/Common/Wildcard.cpp"
-  "${PROJECT_SOURCE_DIR}/CPP/Common/XzCrc64Init.cpp"
-  "${PROJECT_SOURCE_DIR}/CPP/Common/XzCrc64Reg.cpp"
   "${PROJECT_SOURCE_DIR}/CPP/Common/Sha1Reg.cpp"
   "${PROJECT_SOURCE_DIR}/CPP/Common/Sha256Reg.cpp"
+  "${PROJECT_SOURCE_DIR}/CPP/Common/Xxh64Reg.cpp"
+  "${PROJECT_SOURCE_DIR}/CPP/Common/XzCrc64Init.cpp"
+  "${PROJECT_SOURCE_DIR}/CPP/Common/XzCrc64Reg.cpp"
 
   # WIN
   "${PROJECT_SOURCE_DIR}/CPP/Windows/DLL.cpp"
@@ -75,6 +76,7 @@ add_executable(
   "${PROJECT_SOURCE_DIR}/CPP/7zip/Archive/LzmaHandler.cpp"
   "${PROJECT_SOURCE_DIR}/CPP/7zip/Archive/SplitHandler.cpp"
   "${PROJECT_SOURCE_DIR}/CPP/7zip/Archive/XzHandler.cpp"
+  "${PROJECT_SOURCE_DIR}/CPP/7zip/Archive/ZstdHandler.cpp"
 
   # AR_COMMON
   "${PROJECT_SOURCE_DIR}/CPP/7zip/Archive/Common/CoderMixer2.cpp"
@@ -166,6 +168,7 @@ add_executable(
   "${PROJECT_SOURCE_DIR}/CPP/7zip/Compress/ShrinkDecoder.cpp"
   "${PROJECT_SOURCE_DIR}/CPP/7zip/Compress/XzDecoder.cpp"
   "${PROJECT_SOURCE_DIR}/CPP/7zip/Compress/XzEncoder.cpp"
+  "${PROJECT_SOURCE_DIR}/CPP/7zip/Compress/ZstdDecoder.cpp"
 
   # CRYPTO
   "${PROJECT_SOURCE_DIR}/CPP/7zip/Crypto/7zAes.cpp"
@@ -209,10 +212,12 @@ add_executable(
   "${PROJECT_SOURCE_DIR}/C/Sort.c"
   "${PROJECT_SOURCE_DIR}/C/SwapBytes.c"
   "${PROJECT_SOURCE_DIR}/C/Threads.c"
+  "${PROJECT_SOURCE_DIR}/C/Xxh64.c"
   "${PROJECT_SOURCE_DIR}/C/Xz.c"
   "${PROJECT_SOURCE_DIR}/C/XzDec.c"
   "${PROJECT_SOURCE_DIR}/C/XzEnc.c"
   "${PROJECT_SOURCE_DIR}/C/XzIn.c"
+  "${PROJECT_SOURCE_DIR}/C/ZstdDec.c"
 
   resource.rc
 )
@@ -233,6 +238,12 @@ set_target_properties(
     OUTPUT_NAME 7za
     PREFIX ""
     PDB_NAME "7za.exe"
+)
+
+target_compile_definitions(
+  Alone PRIVATE
+
+  Z7_ZIP_LZFSE_DISABLE
 )
 
 install(TARGETS Alone)

@@ -72,4 +72,10 @@ set_target_properties(
     PDB_NAME "lzma.exe"
 )
 
+target_compile_definitions(
+  LzmaCon PRIVATE
+
+  Z7_NO_LONG_PATH
+)
+
 install(TARGETS LzmaCon)

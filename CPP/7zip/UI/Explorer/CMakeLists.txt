@@ -35,6 +35,7 @@ add_library(
   "${PROJECT_SOURCE_DIR}/CPP/Windows/ResourceString.cpp"
   "${PROJECT_SOURCE_DIR}/CPP/Windows/Shell.cpp"
   "${PROJECT_SOURCE_DIR}/CPP/Windows/Synchronization.cpp"
+  "${PROJECT_SOURCE_DIR}/CPP/Windows/TimeUtils.cpp"
   "${PROJECT_SOURCE_DIR}/CPP/Windows/Window.cpp"
 
   # WIN_CTRL
@@ -75,7 +76,6 @@ target_compile_definitions(
   Explorer PRIVATE
 
   Z7_LANG
-  Z7_LONG_PATH
 )
 
 target_link_libraries(

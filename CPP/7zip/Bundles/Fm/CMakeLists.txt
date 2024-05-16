@@ -91,10 +91,4 @@ set_target_properties(
     PDB_NAME "7zzFM.exe"
 )
 
-target_compile_definitions(
-  Fm PRIVATE
-
-  Z7_LARGE_PAGES
-)
-
 install(TARGETS Fm)
