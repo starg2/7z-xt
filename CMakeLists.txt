@@ -18,9 +18,13 @@ set(PLATFORM "$ENV{Platform}" CACHE STRING "Target platform")
 set_property(CACHE PLATFORM PROPERTY STRINGS "x86" "x64" "arm" "arm64")
 
 set(NO_ASM OFF CACHE BOOL "Don't use ASM implementation of LzmaDec")
+set(NO_ASM_GNU OFF CACHE BOOL "Don't use ASM implementation of LzmaDec on arm64")
 set(USE_C_AES OFF CACHE BOOL "Use C AES implementation")
+set(USE_C_CRC OFF CACHE BOOL "Use C CRC implementation")
+set(USE_C_CRC64 OFF CACHE BOOL "Use C CRC64 implementation")
 set(USE_C_LZFINDOPT OFF CACHE BOOL "Use C LzFindOpt implementation")
 set(USE_C_SHA OFF CACHE BOOL "Use C SHA implementation")
+set(USE_NO_ASM OFF CACHE BOOL "Don't use ASM implementation of CRC/CRC64")
 
 # ===
 # CRT

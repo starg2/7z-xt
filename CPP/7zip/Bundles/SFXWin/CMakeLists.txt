@@ -34,6 +34,7 @@ add_executable(
   "${PROJECT_SOURCE_DIR}/CPP/Windows/Shell.cpp"
   "${PROJECT_SOURCE_DIR}/CPP/Windows/Synchronization.cpp"
   "${PROJECT_SOURCE_DIR}/CPP/Windows/System.cpp"
+  "${PROJECT_SOURCE_DIR}/CPP/Windows/TimeUtils.cpp"
   "${PROJECT_SOURCE_DIR}/CPP/Windows/Window.cpp"
 
   # WIN_CTRL
@@ -160,6 +161,8 @@ target_compile_definitions(
   Z7_EXTRACT_ONLY
   Z7_NO_READ_FROM_CODER
   Z7_SFX
+  Z7_NO_LONG_PATH
+  Z7_NO_LARGE_PAGES
 )
 
 target_link_libraries(

@@ -21,6 +21,7 @@ add_executable(
   "${PROJECT_SOURCE_DIR}/CPP/Windows/FileName.cpp"
   "${PROJECT_SOURCE_DIR}/CPP/Windows/PropVariant.cpp"
   "${PROJECT_SOURCE_DIR}/CPP/Windows/PropVariantConv.cpp"
+  "${PROJECT_SOURCE_DIR}/CPP/Windows/TimeUtils.cpp"
 
   # 7ZIP_COMMON
   "${PROJECT_SOURCE_DIR}/CPP/7zip/Common/FileStreams.cpp"

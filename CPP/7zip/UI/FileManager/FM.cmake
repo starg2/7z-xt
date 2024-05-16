@@ -6,6 +6,7 @@ function(AddFMSources target)
     # FM
     "${PROJECT_SOURCE_DIR}/CPP/7zip/UI/FileManager/App.cpp"
     "${PROJECT_SOURCE_DIR}/CPP/7zip/UI/FileManager/BrowseDialog.cpp"
+    "${PROJECT_SOURCE_DIR}/CPP/7zip/UI/FileManager/BrowseDialog2.cpp"
     "${PROJECT_SOURCE_DIR}/CPP/7zip/UI/FileManager/ClassDefs.cpp"
     "${PROJECT_SOURCE_DIR}/CPP/7zip/UI/FileManager/EnumFormatEtc.cpp"
     "${PROJECT_SOURCE_DIR}/CPP/7zip/UI/FileManager/ExtractCallback.cpp"
@@ -18,6 +19,7 @@ function(AddFMSources target)
     "${PROJECT_SOURCE_DIR}/CPP/7zip/UI/FileManager/FSFolderCopy.cpp"
     "${PROJECT_SOURCE_DIR}/CPP/7zip/UI/FileManager/HelpUtils.cpp"
     "${PROJECT_SOURCE_DIR}/CPP/7zip/UI/FileManager/LangUtils.cpp"
+    "${PROJECT_SOURCE_DIR}/CPP/7zip/UI/FileManager/MemDialog.cpp"
     "${PROJECT_SOURCE_DIR}/CPP/7zip/UI/FileManager/MenuPage.cpp"
     "${PROJECT_SOURCE_DIR}/CPP/7zip/UI/FileManager/MyLoadMenu.cpp"
     "${PROJECT_SOURCE_DIR}/CPP/7zip/UI/FileManager/OpenCallback.cpp"
@@ -90,7 +92,6 @@ function(AddFMSources target)
     ${target} PRIVATE
 
     Z7_LANG
-    Z7_LONG_PATH
     Z7_DEVICE_FILE
   )
 

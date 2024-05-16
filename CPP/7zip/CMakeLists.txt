@@ -28,7 +28,7 @@ function(AddCrcSources target)
     "${PROJECT_SOURCE_DIR}/C/7zCrc.c"
   )
 
-  if("${PLATFORM}" MATCHES "^(ia64|mips|arm|arm64)$")
+  if(USE_NO_ASM OR USE_C_CRC OR "${PLATFORM}" MATCHES "^(ia64|mips|arm|arm64)$")
     target_sources(
       ${target} PRIVATE
 
@@ -50,7 +50,7 @@ function(AddCrc64Sources target)
     "${PROJECT_SOURCE_DIR}/C/XzCrc64.c"
   )
 
-  if("${PLATFORM}" MATCHES "^(ia64|mips|arm|arm64)$")
+  if(USE_NO_ASM OR USE_C_CRC64 OR "${PLATFORM}" MATCHES "^(ia64|mips|arm|arm64)$")
     target_sources(
       ${target} PRIVATE
 
@@ -82,7 +82,7 @@ function(AddLzFindOptSources target)
 endfunction()
 
 function(AddLzmaDecSources target)
-  if("${PLATFORM}" MATCHES "^x64$" AND NOT NO_ASM)
+  if(("${PLATFORM}" MATCHES "^x64$" OR ("${PLATFORM}" MATCHES "^arm64$" AND NOT NO_ASM_GNU)) AND NOT NO_ASM)
     target_compile_definitions(
       ${target} PRIVATE
 

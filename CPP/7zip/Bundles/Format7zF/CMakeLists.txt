@@ -25,7 +25,6 @@ target_compile_definitions(
   Format7zF PRIVATE
 
   Z7_EXTERNAL_CODECS
-  Z7_LARGE_PAGES
 )
 
 install(TARGETS Format7zF)

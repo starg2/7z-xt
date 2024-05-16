@@ -41,4 +41,10 @@ function(AddConsoleSources target)
     # C
     "${PROJECT_SOURCE_DIR}/C/DllSecur.c"
   )
+
+  target_compile_definitions(
+    ${target} PRIVATE
+  
+    Z7_DEVICE_FILE
+  )  
 endfunction()

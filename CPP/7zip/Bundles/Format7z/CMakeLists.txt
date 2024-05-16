@@ -25,6 +25,7 @@ add_library(
   "${PROJECT_SOURCE_DIR}/CPP/Windows/PropVariant.cpp"
   "${PROJECT_SOURCE_DIR}/CPP/Windows/Synchronization.cpp"
   "${PROJECT_SOURCE_DIR}/CPP/Windows/System.cpp"
+  "${PROJECT_SOURCE_DIR}/CPP/Windows/TimeUtils.cpp"
 
   # 7ZIP_COMMON
   "${PROJECT_SOURCE_DIR}/CPP/7zip/Common/CreateCoder.cpp"

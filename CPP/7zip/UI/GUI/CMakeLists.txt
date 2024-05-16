@@ -106,6 +106,7 @@ add_executable(
   "${PROJECT_SOURCE_DIR}/CPP/7zip/UI/FileManager/HelpUtils.cpp"
   "${PROJECT_SOURCE_DIR}/CPP/7zip/UI/FileManager/LangUtils.cpp"
   "${PROJECT_SOURCE_DIR}/CPP/7zip/UI/FileManager/ListViewDialog.cpp"
+  "${PROJECT_SOURCE_DIR}/CPP/7zip/UI/FileManager/MemDialog.cpp"
   "${PROJECT_SOURCE_DIR}/CPP/7zip/UI/FileManager/OpenCallback.cpp"
   "${PROJECT_SOURCE_DIR}/CPP/7zip/UI/FileManager/ProgramLocation.cpp"
   "${PROJECT_SOURCE_DIR}/CPP/7zip/UI/FileManager/PropertyName.cpp"
@@ -151,8 +152,6 @@ target_compile_definitions(
 
   Z7_LANG
   Z7_EXTERNAL_CODECS
-  Z7_LONG_PATH
-  Z7_LARGE_PAGES
   Z7_DEVICE_FILE
 )
 
